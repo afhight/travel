@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%="#{@destination.city}, #{@destination.country}"%></h1>
+
+<div class="center">
+<p>
+	Population: <%= number_with_delimiter @destination.population %>
+</p>
+
+
+	<p>
+	  <%= @destination.description %>
+	</p>
+	
+	<br>
+
+	<div class="btn-group">
+	<%= link_to 'Edit', edit_destination_path(@destination), class: "btn btn-default" %> 
+	<%= link_to 'Back', destinations_path, class: "btn btn-default"  %>
+	</div>
+</div>

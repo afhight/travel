@@ -10,10 +10,10 @@
 	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
 
 	<!-- Latest compiled and minified JavaScript -->
-	<%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity:"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin:"anonymous" %>
 
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -30,6 +30,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">AFH</a>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,12 +40,12 @@
        
         <!-- ruby tagged link!! -->
         <li><%= link_to "About Me", about_path(color: "lavender", size: 11) %></li>
-        
+        <li><%= link_to "Destinations", destinations_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
+            <li><%= link_to "About Me", about_path(color: "lavender", size: 11) %></li>
+            <li><% link_to "Destinations", destinations_path %></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
@@ -52,7 +53,7 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-      </ul>
+      <!-- </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -69,7 +70,7 @@
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
-          </ul>
+          </ul> -->
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -83,4 +84,8 @@
 </div>
 
 </body>
+
+
+  <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity:"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin:"anonymous" %>
+
 </html>
